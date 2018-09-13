@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <Registration /> -->
-    <MainPage />
+    <Registration />
+    <!-- <MainPage /> -->
   </div>
 </template>
 

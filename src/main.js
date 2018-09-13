@@ -4,7 +4,7 @@ import Element from "element-ui";
 
 //Style
 import '@/assets/sass/style.sass';
-import "element-ui/lib/theme-chalk/index.css";
+import 'element-ui/lib/theme-chalk/index.css';
 
 
 Vue.use(Element);
