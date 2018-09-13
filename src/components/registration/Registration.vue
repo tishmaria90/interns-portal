@@ -1,7 +1,8 @@
 <template>
   <div class="registration-page">
+
     <div class="registration-main-block">
-      <div class="logo">
+      <div class="logo logo_registration-page">
         <a href="http://2-up.ru" title="2up" target="_blank">
           <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="150px" height="55px" viewBox="0 0 150 55" enable-background="new 0 0 150 55" xml:space="preserve">
@@ -36,7 +37,12 @@
         </a>
       </div>
       <div class="registration-form">
-
+        <div class="registration-form__header">
+          <button @click="toggleComponent">{{ toggle ? 'Войти' : 'Зарегистрироваться' }}</button>
+        </div>
+        <div class="registration-form__body">
+          <component :is="toggle ? 'sing-in' : 'sing-up'"></component>
+        </div>
       </div>
     </div>
     
@@ -44,12 +50,27 @@
 </template>
 
 <script>
+  import SingIn from './SingIn'
+  import SingUp from './SingUp'
+  import './../../assets/sass/components/logo.sass'
+
   export default {
+    components: {
+      SingIn,
+      SingUp
+    },
     data() {
       return {
-         
+        toggle: true
+      }
+    },
+    methods: {
+      toggleComponent() {
+        this.toggle = !this.toggle
       }
     }
   }
 </script>
-<style lang="sass"></style>
+<style lang="sass">
+  
+</style>
