@@ -1,5 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import Element from "element-ui";
+
+//Style
+import '@/assets/sass/style.sass';
+import "element-ui/lib/theme-chalk/index.css";
+
+
+Vue.use(Element);
 
 Vue.config.productionTip = false
 
