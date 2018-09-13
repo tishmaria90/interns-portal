@@ -1,5 +1,5 @@
-module.exports = {
-  css: {
-    modules: true
-  }
-};
+// module.exports = {
+//   css: {
+//     modules: true
+//   }
+// };
